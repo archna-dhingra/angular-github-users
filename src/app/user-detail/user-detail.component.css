@@ -1,0 +1,186 @@
+.filter-container {
+    display: flex;
+}
+
+.filter-container input {
+    flex: 1;
+}
+
+hr {
+    margin-bottom: 0px;
+}
+
+.mat-tab-header {
+    margin-bottom: 16px;
+}
+
+.mat-tab-label { 
+    min-width: 0px !important;
+    padding: 16px 8px !important;
+    margin-right: 16px;
+}
+
+.name-container {
+    padding: 16px 0px;
+}
+    
+.name-container h1 {
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.user-profile-container {
+    width: 260px;
+    margin-left: 40px;
+}
+
+.select-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid rgba(27,31,35,.2);
+    border-radius: .25em;
+    -webkit-appearance: none;
+    color: #24292e;
+    background-color: #eff3f6;
+    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    width: auto;
+    display:flex;
+    margin-left: 10px;
+    white-space: nowrap;
+    flex: 1;
+}
+
+.select-filters {
+    display: flex;
+    flex: 1;
+}
+
+.tab-count {
+    display: inline-block;
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    color: #586069;
+    background-color: rgba(27,31,35,.08);
+    border-radius: 20px;
+}
+
+.user-profile-page {
+    margin: 24px 10px 0px;
+}
+
+.user-img {
+    width: 100%;
+    /* height: 260px; */
+    border: 1px solid #e1e4e8;
+    border-radius: 3px;
+}
+
+.user-desc {
+    margin: 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: #666;
+}
+
+.table-list, .personal-details {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.table-list li.repo-container {
+    border-bottom: 1px solid #e1e4e8!important;
+    padding: 24px 0px;
+}
+
+.table-list li h3 {
+    color: #0366d6;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.table-list li p.repo-description {
+    margin-bottom: 8px;
+    color: #586069;
+}
+
+.user-repos .table-list li ul {
+    padding-left: 0px;
+    margin-top: 8px;
+}
+
+.user-repos .table-list li ul li {
+    border: 0;
+    padding: 0;
+    margin-right: 15px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.lang-color {
+    background-color: #563d7c;
+    border-radius: 50%;
+    display: inline-block;
+    height: 12px;
+    position: relative;
+    top: 1px;
+    width: 12px;
+    margin-right: 5px;
+}
+
+.follow-btn {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    border: 1px solid rgba(27,31,35,.2);
+    border-radius: .25em;
+    color: #24292e;
+    background-color: #eff3f6;
+    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    padding: 6px 12px;
+    width: 100%;
+}
+
+.table-list li .material-icons.star-gazers {
+    font-size: 18px;
+    margin-right: 0px;
+    vertical-align: text-bottom;
+}
+
+.table-list li .forks {
+    width: 10px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.table-list li .license {
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+}
+
+.personal-details {
+    margin-top: 30px;
+}
+
+.personal-details .material-icons {
+    color: #6a737d;
+    font-size: 18px;
+}
+
+.personal-details .company {
+    color: #24292e;
+}
+
+.personal-details .link {
+    color: #0366d6;
+}

@@ -1,0 +1,39 @@
+.avatar {
+    border-radius: 5px;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0px;
+}
+
+.input-search-icon {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.mat-column-profilePic {
+    width: 30%;
+}
+
+.mat-row {
+    cursor: pointer;
+}
+
+.search-container {
+    margin: 50px auto;
+}
+
+.search-container .form-control {
+    padding-left: 2.375rem;
+}
+
+table {
+    width: 100%;
+}  

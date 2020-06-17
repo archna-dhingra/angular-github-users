@@ -1,0 +1,113 @@
+<div class="container-fluid user-profile-page">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="user-profile-container">
+                <img class="user-img" [src]="userDetails?.userData?.avatar_url">
+                <br>
+                <div class="name-container">
+                    <h1>
+                        <div>{{userDetails?.userData?.name}}</div>
+                        <div class="user-desc">{{userDetails?.userData?.login}}</div>
+                    </h1>
+                    <button type="button" class="follow-btn">Follow</button>
+                    <div>
+                        <ul class="personal-details">
+                            <li>
+                                <mat-icon>business</mat-icon>
+                                <span class="company"><b>{{userDetails?.userData?.company}}</b></span>
+                            </li>
+                            <li>
+                                <mat-icon>location_on</mat-icon>
+                                <span>{{userDetails?.userData?.location}}</span>
+                            </li>
+                            <li>
+                                <mat-icon>mail_outline</mat-icon>
+                                <span class="link">{{userDetails?.userData?.email}}</span>
+                            </li>
+                            <li>
+                                <mat-icon>link</mat-icon>
+                                <span class="link">{{userDetails?.userData?.blog}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <mat-tab-group #tabs animationDuration="0ms">
+                <mat-tab *ngFor="let tab of tabsList; let tabIndex = index">
+                    <ng-template mat-tab-label>
+                        {{tab.title}}
+                        &nbsp;
+                        <span *ngIf="tab.count" class="tab-count">{{tab.count}}</span>
+                    </ng-template>
+                    <div *ngIf="tabIndex === 1">
+                        <div class="filter-container">
+                            <input type="text" class="form-control" placeholder="Find a repository...">
+                            <div class="select-filters">
+                                <div class="select-btn">
+                                    <div class="select-placeholder">Type:&nbsp;</div>
+                                    <mat-select [(value)]="selectedType">
+                                        <mat-option>Select Type</mat-option>
+                                            <mat-option value="All">All</mat-option>
+                                            <mat-option value="Sources">Sources</mat-option>
+                                            <mat-option value="Forks">Forks</mat-option>
+                                            <mat-option value="Archived">Archived</mat-option>
+                                            <mat-option value="Mirror">Mirror</mat-option>
+                                    </mat-select>
+                                </div>
+                                <div class="select-btn">
+                                    <div class="select-placeholder">Language:&nbsp;</div>
+                                    <mat-select [(value)]="selectedLanguage">
+                                        <mat-option>Select Language</mat-option>
+                                        <mat-option value="All">All</mat-option>
+                                    </mat-select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="user-repos">
+                            <ul class="table-list">
+                                <li *ngFor="let repository of userDetails?.userRepos" class="repo-container">
+                                    <h3>{{repository.name}}</h3>
+                                    <p class="repo-description">{{repository.description}}</p>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <span class="lang-color"></span>
+                                                <span>{{repository.language}}</span>
+                                            </li>
+                                            <li *ngIf="repository.stargazers_count > 0">
+                                                <span>
+                                                    <span class="material-icons star-gazers">star_border</span>
+                                                    {{repository.stargazers_count}}
+                                                </span>
+                                            </li>
+                                            <li *ngIf="repository.forks_count > 0">
+                                                <span>
+                                                    <img src="../../assets/forks.png" class="forks"/>
+                                                    {{repository.forks_count}}
+                                                </span>
+                                            </li>
+                                            <li *ngIf="repository.license">
+                                                <span>
+                                                    <img src="../../assets/license.png" class="license" />
+                                                    {{repository.license.name}}
+                                                </span>
+                                            </li>
+                                            <li>
+                                                Updated on {{repository?.lastUpdatedOn}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</div>
