@@ -37,8 +37,6 @@ export class UsersComponent implements AfterViewInit {
           return observableOf([]);
         })
       ).subscribe(data => {
-        console.log('data');
-        console.log(data);
         this.usersData = data
       });
   }
@@ -46,7 +44,6 @@ export class UsersComponent implements AfterViewInit {
   loadUsers() {
     this.userService.fetchAllUsers(this.userSeachQuery).subscribe(users => {
       if(users?.items) {
-        console.log(users);
         this.usersData = users.items;
         this.userDataLength = users.total_count;
       }

@@ -124,6 +124,7 @@ li {
     margin-right: 15px;
     display: inline-block;
     font-size: 12px;
+    color: #586069;
 }
 
 .lang-color {
@@ -172,9 +173,13 @@ li {
     margin-top: 30px;
 }
 
-.personal-details .material-icons {
-    color: #6a737d;
-    font-size: 18px;
+.personal-details li {
+    margin-top: 5px;
+}
+
+.personal-details .pd-icon {
+    margin-right: 5px;
+    fill: #6a737d;
 }
 
 .personal-details .company {
@@ -183,4 +188,43 @@ li {
 
 .personal-details .link {
     color: #0366d6;
+}
+
+.table-list .repos-icons {
+    fill: #586069;
+}
+
+.octicon {
+    vertical-align: text-bottom;
+    width: 16px;
+    height: 16px;
+}
+
+.reset-query {
+    width: 18px;
+    height: 18px;
+    padding: 1px;
+    margin-right: 3px;
+    fill: #fff;
+    text-align: center;
+    background-color: #6a737d;
+    border-radius: 3px;
+    vertical-align: text-bottom;
+}
+
+.reset-query-container {
+    display: table-cell;
+    position: absolute;
+    right: 0;
+    color: #586069;
+    cursor: pointer;
+}
+
+.filterResults {
+    margin-top: 1rem;
+    display: table;
+}
+
+.filterResults div:first-child {
+    display: table-cell;
 }
